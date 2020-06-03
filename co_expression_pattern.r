@@ -24,7 +24,7 @@ library(corrplot)
 #corrplot(y, method = "pie",tl.col = "black")
 
 
-#Part II read relevant RNA expression data of cofor analysis
+#Part II read relevant RNA expression data of co-expression analysis
 
 #Read and re-organized CAD-related expression data
 pearson<- read.delim("CAD.txt",header = T)
@@ -40,7 +40,6 @@ pearson_new3<-pearson_new[,c(-1,-2)]
 mat_pearson1<-as.matrix(pearson_new3)
 row.names(mat_pearson1)<- pearson_new[,2]
 correlation_Control <- cor(t(mat_pearson1))
-
 
 
 #Part III Visualization
